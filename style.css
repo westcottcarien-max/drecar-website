@@ -1024,6 +1024,11 @@ input, select, textarea, button { font-family: inherit; }
   gap: 24px;
 }
 
+.testimonial-icon {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
 .testimonial-card {
   background: var(--dark-2);
   border: 1px solid var(--border);
