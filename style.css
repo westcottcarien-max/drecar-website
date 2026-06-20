@@ -831,6 +831,82 @@ input, select, textarea, button { font-family: inherit; }
   animation: float 6s ease-in-out infinite;
 }
 
+/* ── WHAT I CAN DO ── */
+.whatido-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.whatido-card {
+  background: var(--dark-2);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 32px 28px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.whatido-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--orange);
+}
+
+.whatido-icon {
+  width: 44px;
+  height: 44px;
+  color: var(--orange);
+  margin-bottom: 18px;
+}
+
+.whatido-icon svg { width: 100%; height: 100%; }
+
+.whatido-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 16px;
+}
+
+.whatido-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.whatido-list li {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  padding-left: 16px;
+  position: relative;
+}
+
+.whatido-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--orange);
+  font-size: 0.8rem;
+}
+
+.whatido-cta {
+  text-align: center;
+  margin-top: 52px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.whatido-cta p {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+}
+
+.whatido-cta strong { color: var(--white); }
+
 /* ── PRICING ── */
 .pricing-grid {
   display: grid;
