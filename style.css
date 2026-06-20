@@ -831,6 +831,119 @@ input, select, textarea, button { font-family: inherit; }
   animation: float 6s ease-in-out infinite;
 }
 
+/* ── PRICING ── */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+.pricing-card {
+  background: var(--dark-2);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--orange);
+}
+
+.pricing-card--featured {
+  border-color: var(--orange);
+  background: linear-gradient(135deg, rgba(255,101,0,0.08) 0%, var(--dark-2) 100%);
+}
+
+.pricing-popular {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--orange);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 16px;
+  border-radius: 20px;
+}
+
+.pricing-icon {
+  width: 48px;
+  height: 48px;
+  color: var(--orange);
+}
+
+.pricing-icon svg { width: 100%; height: 100%; }
+
+.pricing-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--orange);
+}
+
+.pricing-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--white);
+  margin: 0;
+}
+
+.pricing-price {
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+
+.pricing-price span {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--white);
+}
+
+.pricing-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+}
+
+.pricing-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.pricing-features li {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.pricing-features li::first-letter { color: var(--orange); }
+
+.pricing-note {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.pricing-note a { color: var(--orange); text-decoration: none; }
+
 /* Portfolio image variants */
 .portfolio-img--ecommerce { background: linear-gradient(135deg, #FF6B00 0%, #FF9A3C 100%); }
 .portfolio-img--mobile    { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); }
