@@ -89,14 +89,35 @@ form.addEventListener('submit', e => {
   btn.disabled = true;
   btnText.textContent = 'Sending...';
 
-  // Simulate send (replace with actual fetch/API call)
-  setTimeout(() => {
+  const subject = form.subject ? form.subject.value : '';
+  const budget  = form.budget  ? form.budget.value  : '';
+
+  fetch('https://formsubmit.co/ajax/westcottcarien@gmail.com', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify({
+      name,
+      email,
+      message,
+      _subject: `New enquiry from ${name} — DréCar Technologies`,
+      'Project Type': subject,
+      'Budget Range': budget,
+      _captcha: 'false'
+    })
+  })
+  .then(res => res.json())
+  .then(() => {
     btn.disabled = false;
     btnText.textContent = originalText;
     form.reset();
     formSuccess.classList.add('show');
     setTimeout(() => formSuccess.classList.remove('show'), 5000);
-  }, 1500);
+  })
+  .catch(() => {
+    btn.disabled = false;
+    btnText.textContent = originalText;
+    alert('Something went wrong. Please email us directly at info@drecar.co.za');
+  });
 });
 
 function shakeForm() {
