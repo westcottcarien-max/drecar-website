@@ -1,4 +1,4 @@
-/* DréCar Technologies — Main JavaScript */
+/* dréCAR Technologies — Main JavaScript */
 
 // ── NAVBAR: scroll effect & active link ──
 const navbar = document.getElementById('navbar');
@@ -99,7 +99,7 @@ form.addEventListener('submit', e => {
       name,
       email,
       message,
-      _subject: `New enquiry from ${name} — DréCar Technologies`,
+      _subject: `New enquiry from ${name} — dréCAR Technologies`,
       'Project Type': subject,
       'Budget Range': budget,
       _captcha: 'false'
